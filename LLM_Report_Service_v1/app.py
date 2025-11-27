@@ -30,7 +30,7 @@ def main_console():
         project_root_path = current_file_path.parent
         
         # 設定資料路徑 (請確認檔名是否正確)
-        DATA_FILE_PATH = project_root_path / 'data' / 'realistic_vehicle_dataset1.csv'
+        DATA_FILE_PATH = project_root_path / 'data' / 'five_cars_2months_realdata_merged.csv'
         
         print(f"正在讀取資料: {DATA_FILE_PATH} ...")
         
@@ -44,6 +44,11 @@ def main_console():
         
         # --- 資料清洗與格式化 ---
         # 1. 時間格式轉換
+
+        if '攝影機' not in full_data.columns and 'LocationID' in full_data.columns:
+            full_data['攝影機'] = full_data['LocationID']
+
+            
         full_data['datetime'] = pd.to_datetime(full_data['日期'] + ' ' + full_data['時間'])
         full_data = full_data.sort_values(by='datetime').reset_index(drop=True)
         

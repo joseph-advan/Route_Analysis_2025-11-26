@@ -1,3 +1,13 @@
+/network_log
+/crypto_llm
+/LLM_Report_Service_v1/data/EDA_code
+/LLM_Report_Service_v1/data/5car_real_data_transtocsv.ipynb
+/LLM_Report_Service_v1/data/OLD_test_data
+/LLM_Report_Service_v1/data/project_origin_data
+/LLM_Report_Service_v1/data/generating_data
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

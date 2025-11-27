@@ -66,8 +66,8 @@ def format_details_to_string(summary_data: dict, area_map: dict) -> str:
         output.append("- 在此期間未發現任何重複出現的規律性行程。\n")
     output.append("\n---\n")
 
-    # --- 區塊 3: 路徑異常事件 ---
-    output.append("### [路徑異常事件 (次數較少的行程)]\n")
+    # --- 區塊 3: 非規律路徑事件 ---
+    output.append("### [非規律路徑事件 (次數較少的行程)]\n")
     infrequent_patterns = summary_data.get("infrequent_patterns", [])
     if infrequent_patterns:
         for anomaly in infrequent_patterns:

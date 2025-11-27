@@ -40,7 +40,7 @@ def format_summary_for_prompt(summary: dict, area_map: dict) -> str:
         prompt_text += "- 無\n"
 
 
-    prompt_text += "\n[路徑異常事件 (次數較少的行程)]\n"
+    prompt_text += "\n[非規律路徑事件 (次數較少的行程)]\n"
     if summary['infrequent_patterns']:
         infrequent_df = pd.DataFrame(summary['infrequent_patterns'])
         for signature, group in infrequent_df.groupby('signature'):
